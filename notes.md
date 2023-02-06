@@ -85,3 +85,54 @@ En typescript podemos tipar o no los datos, lo cual nos ayuda mucho a la hora de
     b = 3.1416;
 
 ```
+
+
+### Funciones
+
+
+REST: 
+
+```ts
+
+         // REST, Resto de argumentos. 
+
+        const fullName = (firstName: string, ...restArgs: string[]): string => {
+            return `${firstName} ${restArgs.join(' ')}`
+        }
+    
+        const superman = fullName( 'Clark', 'Joseph', 'Kent')
+
+        console.log({superman})
+
+```
+
+
+Tipando las funciones :
+
+```ts
+
+    const addNumbers = (a:number, b:number) =>  a + b;
+    const greet = (name:string) =>  `Hola ${name}`;
+    const saveTheWorld = () => `El mundo está salvado!`;
+
+    //let myFunction; // El tipo de retorno es any
+    //let myFunction: (y:number, z:number) => number ; // EL tipo de retorno es number
+
+    let myFunction: (a: string) => string 
+
+    // EL tipado se aplica incluso si definimos una funcion mediante otra
+
+    myFunction = addNumbers
+    console.log(myFunction(1,2))
+   
+    myFunction = greet
+    console.log(myFunction('David'))
+   
+    myFunction = saveTheWorld
+    console.log(myFunction())
+
+
+
+```
+
+
