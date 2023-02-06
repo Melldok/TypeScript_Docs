@@ -5,6 +5,13 @@
     const linternaVerde: string = "Linterna Verde";
     const volcanNegro: string = `Heroe: Volcan Negro`;
 
+   
+
+    console.log(`I'm ${ batman }`)
+
     console.log(batman.toLocaleUpperCase())
+
+    console.log(batman[10]?.toUpperCase() || 'Not present')
+
 
 })()
