@@ -136,3 +136,39 @@ Tipando las funciones :
 ```
 
 
+### Objetos
+
+**Tipado de objetos** 
+
+Con la palabra reservada Type ( Sin contraparte JS ) podemos definir un tipo de objeto que hará las distintas comprobaciones sin tener que definir todos los tipos en cada creación de un objeto nuevo.
+
+```ts   
+
+        type Hero = {
+        name: string;
+        age? : number;
+        powers: string[];
+        getName?: () => string;
+    }
+
+
+     
+    let flash: Hero = {
+        name: 'Barry Allen',
+        age: 24,
+        powers: ['Super Velocidad', 'Viajar en el tiempo']
+    }
+
+    let superman: Hero = {
+        name: 'Clarck kent',
+        age: 60,
+        powers: ['Super Velocidad', 'Super Fuerza'],
+        getName(){
+            return this.name;
+        }
+    }
+
+
+```
+
+
