@@ -1,5 +1,5 @@
-
-// Objetos
+(() => {
+  // Objetos
 
 type Vehiculo = {
   carroceria: string;
@@ -78,3 +78,7 @@ let mystique: Person | FinalEvent;
 
 mystique = charles;
 mystique = apocalipsis;
+
+})()
+
+

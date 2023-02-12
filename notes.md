@@ -6,9 +6,36 @@
 Creacion del archivo tsconfig : tsc --init
 Aqui definimos todo lo que necesitamos de nuestra apliacion, podemos definir el nivel de estricto, el nivel de muestra de error, el objetivo, etc. 
 
+
+**Eliminar comentarios en la transpilación**
+
+"removeComments" : true
+
+
+**Incluir o Excluir archivos**
+
+"exclude": [
+    " xx "
+]
+
+"include": [
+    " xx "
+]
+
+**outFile**
+
+Los frameworks lo hacen de forma nativa. Lo usamos para juntar todos nuestros archivos en uno solo, reduciendo el caos. Se utiliza con "outFile": 
+
 ### Modo observador 
 
 Detecta los cambios introducidos en el codigo y lo traspila de forma automatica. (tsc --watch)
+
+
+### Depuración de código
+
+Para conocer los errores que tenemos en las lineas concretas de nuestro codigo, deberemos hacer un cambio en el ts config. Concretamente tendremos que activar "SourceMap" : true. Esto mapeara nuestros errores. 
+
+
 
 ### Tipos de datos 
 
@@ -170,5 +197,9 @@ Con la palabra reservada Type ( Sin contraparte JS ) podemos definir un tipo de 
 
 
 ```
+
+### Clases Abstractas
+
+Sirven para crear otras clases o asegurarse de que otras clases implementen lo que se desea.
 
 
