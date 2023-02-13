@@ -202,4 +202,59 @@ Con la palabra reservada Type ( Sin contraparte JS ) podemos definir un tipo de 
 
 Sirven para crear otras clases o asegurarse de que otras clases implementen lo que se desea.
 
+Tambien sirve para especificar que estoy esperando una clase/objeto/argumento que haya sido extendido de este tipo. 
 
+
+### Interfaces 
+
+
+Funcionan de manera similar a los tipos. La única diferencia es que los tipos no pueden extenderse pero las interfaces si. 
+
+
+***Interfaces Anidadas***: 
+
+
+```ts
+
+     interface Client{
+        name: string;
+        age?: number;
+        address: Address;
+        getFullAddress?(id:string): void //Las interfaces no implementan metodos, solo los declaran. 
+    }
+
+
+    interface Address{
+        id: number,
+        zip: string;
+        city: string;
+    }
+
+
+    const client: Client = {
+        name: 'David',
+        age: 25,
+        address: {
+            id: 125,
+            zip: 'KY2 SUD',
+            city: 'Ottawa'
+        },
+
+        getFullAddress(id) {
+            return this.address.city
+        },
+    }
+
+    const client2: Client = {
+        name: 'Melissa',
+        age: 30,
+        address :  {
+            id:  120,
+            zip: 'K2S U2A',
+            city: 'Toronto',
+        }
+    }
+    
+    
+
+```

@@ -1,7 +1,7 @@
 (() => {
 
 
-
+    // Esta clase servirá de "cascarón" para crear clases nuevas
     abstract class Mutante{
         constructor(
             public name: string,
@@ -9,8 +9,31 @@
         ){}
     }
 
-    const wolverine = new Mutante('Wolverine', 'Logan');
 
+    class Xmen extends Mutante{
+        salvarMundo(){
+            return 'Mundo a salvo!'
+        }
+    }
+    class Villian extends Mutante{
+        conquistarMundo(){
+            return 'Mundo conquistado!'
+        }
+    }
+
+
+    const wolverine = new Xmen('Wolverine', 'Logan');
+    const magneto = new Villian('Magneto', 'Max')
+
+    // console.log(wolverine.salvarMundo());
+    // console.log(magneto.conquistarMundo());
+
+
+    const printName = ( character: Mutante) => {
+        console.log(character.realName);
+    }
+
+    //printName(magneto)
 
 
 })()
