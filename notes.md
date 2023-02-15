@@ -258,3 +258,9 @@ Funcionan de manera similar a los tipos. La única diferencia es que los tipos n
     
 
 ```
+
+
+### Decoradores
+
+Son funciones que se ejecutan en el momento de transpilacion. Permite expandir la funcionalidad de una clase/metodo etc. 
+
